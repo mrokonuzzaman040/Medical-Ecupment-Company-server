@@ -1,0 +1,5 @@
+/.env
+/apis.txt
+/database.sql
+/node_modules
+/upload
