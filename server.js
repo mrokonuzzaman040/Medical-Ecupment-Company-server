@@ -11,8 +11,8 @@ require( './config/db' ); // just executes the connection logic
 // Middleware
 app.use( express.json() );
 app.use( express.urlencoded( { extended: true } ) );
-app.use( cors(/* your corsOptions if you want them */ ) );
 app.use( errorHandler );
+app.use(cors());
 
 // Combine all routes
 const allRoutes = require( './routes' );
