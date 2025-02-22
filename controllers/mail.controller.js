@@ -1,7 +1,9 @@
 const nodemailer = require( 'nodemailer' );
 
 exports.sendMail = async ( req, res ) => {
-    const { to, subject, text, html } = req.body;
+    const { subject, text, html } = req.body;
+
+    const to = process.env.MAIL_TO;
 
     try {
         const transporter = nodemailer.createTransport( {
